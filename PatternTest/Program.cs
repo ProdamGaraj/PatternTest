@@ -7,12 +7,12 @@ namespace PatternTest
         static void Main(string[] args)
         {
             User user = new User("John Doe");
+            Lesson lesson = LessonFactory.Create("Algebra", "2+2=22");
             Course course = new CourseBuilder("Math 101")
                 .WithDescription("Introduction to mathematics")
                 .WithInstructor("Jane Smith")
+                .AddLesson(lesson)
                 .Build();
-            Lesson lesson = LessonFactory.Create("Algebra", course);
-            course.AddLesson(lesson);
             Console.WriteLine(course);
             Console.ReadLine();
         }

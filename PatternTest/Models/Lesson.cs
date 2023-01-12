@@ -9,12 +9,12 @@ namespace PatternTest.Models
     class Lesson
     {
         public string Name { get; set; }
-        public Course Course { get; set; }
+        public string Data { get; set; }
 
-        public Lesson(string name, Course course)
+        public Lesson(string name, string data)
         {
             Name = name;
-            Course = course;
+            Data = data;
         }
     }
 }

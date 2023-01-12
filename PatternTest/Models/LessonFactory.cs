@@ -8,9 +8,9 @@ namespace PatternTest.Models
 {
     class LessonFactory
     {
-        public static Lesson Create(string name, Course course)
+        public static Lesson Create(string name, string data)
         {
-            return new Lesson(name, course);
+            return new Lesson(name, data);
         }
     }
 }

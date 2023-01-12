@@ -29,11 +29,6 @@ namespace PatternTest.Models
             return _instance;
         }
 
-        public void AddLesson(Lesson lesson)
-        {
-            Lessons.Add(lesson);
-        }
-
         public override string ToString()
         {
             return $"Name: {Name}\nDescription: {Description}\nInstructor: {Instructor}\nLessons: {string.Join(", ", Lessons.Select(x => x.Name))}";

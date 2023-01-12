@@ -15,6 +15,11 @@ namespace PatternTest.Models
             _course = Course.GetInstance(name);
         }
 
+        public CourseBuilder AddLesson(Lesson lesson) {
+            _course.Lessons.Add(lesson);
+            return this;
+        }
+
         public CourseBuilder WithDescription(string description)
         {
             _course.Description = description;
